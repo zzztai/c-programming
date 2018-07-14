@@ -1,0 +1,3 @@
+添加本地项目到github步骤：
+git add * 文件
+git push
