@@ -1,4 +1,21 @@
 添加本地项目到github步骤：
+（1）首先在github上新建一个仓库
+（2）在本地创建ssh key
+$ ssh-keygen -t rsa -C "example@email.com"
+然后复制key  $vim ~/.ssh/id_rsa.pub   在github setting里的ssh添加key
+验证是否成功 $ssh -T git@github.com   这里是github.com
+（3）本地新建一个仓库
+$mkdir build demo
+$cd demo
+$git init
+(4)添加远程仓库地址，即1中的仓库地址
+$git remote add origin git@github.com：YUOR_NAME/YOUR_PROJECT
+(5)提交上传
+$git add * File_Name    (或者$git add .)
+$git commit -m "description"
+$gti push origin master
+
 cd 到c-programming也就是github上的项目
 git add * 文件
+这里要加 git commit -m ""
 git push
